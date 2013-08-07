@@ -1,0 +1,37 @@
+/* -----------------------------------------------
+		PAGE HEADER AND DECORATIVE TOPIC IMAGE
+	 -----------------------------------------------*/
+.header {
+	background: @lightestBlue;
+	padding: 5px 10px 0;
+	&:after {
+		content: " ";
+		height: 0;
+		line-height: 0;
+		visibility: hidden;
+		display: block;
+		clear: left;
+	}
+}
+.topic-link {
+	display: block;
+	float: left;
+	padding: 0.2em 0 0.6em;
+	font: normal 1.833em/1.2 Arial, HelveticaNeue, Helvetica, Univers, sans-serif;
+	text-decoration: none;
+	color: @darkBlue;
+	&:hover,
+	&:active {
+		text-decoration: none;
+		span {
+			color: @blue;
+			text-decoration: underline;
+		}
+	}
+	em {
+		display: block;
+		color: @anthracite;
+		font-size: 0.818em;
+		line-height: 1.8;
+	}
+}

@@ -1,0 +1,42 @@
+/* -----------------------------------------------
+	NAVIGATION POP IN
+	Show normal main navigation if there's room
+	 -----------------------------------------------*/
+@media (min-width: 58em) {
+	#skip-to-menu {
+		top: -10000px;
+		text-transform: lowercase;
+	}
+
+	/* ---------------------------
+		 MAIN NAVIGATION
+		 ----------------------------*/
+	#navigation {
+		width: auto;
+		max-width: 66em;
+		height: 3.575em;
+		position: absolute;
+		top: 87px;
+		margin: 0;
+		background-color: transparent;
+		h2 {position: absolute; top: -100000px;}
+		ul {
+			margin: 1.5em 0 0 20px;
+			background-color: transparent;
+			li {width: auto; float: left; margin: 0; border-bottom: 0;}
+		}
+		a,
+		a:visited {
+			padding: 0.1em 10px;
+			background-color: transparent;
+			color: @white;
+			font-family: arial, helvetica, sans-serif;
+			font-size: 1.1em;
+			font-weight: bold;
+		}
+		a:hover,
+		a:active,
+		.selected a,
+		.selected a:visited {background-color: @lightBlue; color: @black;}
+	}
+}

@@ -1,0 +1,68 @@
+/* -----------------------------------------------
+		FOOTER NAVIGATION
+	 -----------------------------------------------*/
+#footer {
+	background-color: @lightGray;
+	padding-bottom: 20px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	&:after {
+		content: " ";
+		height: 0;
+		line-height: 0;
+		visibility: hidden;
+		display: block;
+		clear: left;
+	}
+	&:before {
+		content: " ";
+		display: block;
+		width: 44px;
+		height: 22px;
+		position: absolute;
+		top: -25px;
+		left: 50%;
+		z-index: 100;
+		margin-left: -22px;
+		background-color: @darkBlue;
+	}
+	h2 {
+		margin: 0;
+		padding: 1.44em 10px 0.5em;
+		color: @anthracite;
+		font-weight: normal;
+		font-size: 1.25em;
+		border-bottom: 1px solid @gray;
+	}
+	ul {
+		padding: 0 10px;
+		li {
+			display: block;
+			float: left;
+			margin: 0 20px 0 0;
+			padding: 0;
+		}
+	}
+	a,
+	a:visited {
+		display: block;
+		padding: 0.2em 0 0.6em;
+		color: @anthracite;
+		font-size: 0.9167em;
+		text-decoration: none;
+	}
+	a:focus,
+	a:hover {
+		text-decoration: underline;
+	}
+	.column {
+		clear: both;
+		float: left;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+}

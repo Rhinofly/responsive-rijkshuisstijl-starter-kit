@@ -1,0 +1,74 @@
+/* -----------------------------------
+	 REGULAR LAYOUT
+	 Tablet landscape
+	 Small laptops
+	 Small canvases on desktop
+	 Font size drop
+	 -----------------------------------*/
+@media (min-width: 50em) {
+	caption {padding-left: 20px;}
+	.header {padding-left: 20px; padding-right: 20px; margin-right: -20px;}
+	.article {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0 0 0 20px;
+		width: 66.7%;
+		max-width: 640px;
+		float: left;
+		margin-top: 40px;
+	}
+	#mainbox {padding-bottom: 5em;}
+	#main {padding: 0 20px 0 0;}
+	#aside {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 0 0 0 20px;
+		display: block;
+		width: 25%;
+		max-width: 240px;
+		float: right;
+		clear: right;
+		margin: 40px 0 0 0;
+	}
+	#navigation {margin-top: 40px;}
+	#search form {margin-right: 20px;}
+	.leaderboard {padding: 0 0 0 20px;}
+	#skip-to-menu {left: 20px;}
+
+	/* --------------------------
+		 FOOTER NAVIGATION
+		 --------------------------*/
+	#footer {
+		padding: 0 20px 40px;
+		.column {
+			clear: none;
+			float: left;
+			margin-left: 1.6949%;
+			width: 32.2033%;
+			display: block;
+			&:first-child {
+				clear: both;
+				margin-left: 0;
+			}
+		}
+		a {padding-left: 0; padding-right: 0;}
+		h2 {padding-left: 0; padding-right: 0; margin-bottom: 0.33em; font-size: 1.5em;}
+		a,
+		a:visited {font-size: 1.083em;}
+		ul {padding: 0;}
+	}
+
+	/* ---------------------------
+		 TABBED NAVIGATION
+		 ---------------------------*/
+	.tabs {
+		li {margin-right: 10px;}
+		a,
+		strong {font-size: 1.25em;}
+	}
+}

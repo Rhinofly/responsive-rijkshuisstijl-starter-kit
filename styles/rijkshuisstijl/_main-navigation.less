@@ -1,0 +1,37 @@
+/* -----------------------------------------------
+		MAIN NAVIGATION
+	 -----------------------------------------------*/
+#navigation {
+	ul:after {
+		content: " ";
+		height: 0;
+		line-height: 0;
+		visibility: hidden;
+		display: block;
+		clear: left;
+	}
+	ul {
+		background-color: @lightestBlue;
+	}
+	li {
+		margin: 0 0 2px -10px;
+	}
+	a,
+	a:visited {
+		display: block;
+		padding: 0.4em 10px 0.4em 20px;
+		font-family: arial, helvetica, sans-serif;
+		font-size: 1.1em;
+		text-decoration: none;
+		color: @darkBlue;
+	}
+	a:hover,
+	a:active,
+	.selected a {
+		color: @blue;
+	}
+	.selected a {
+		color: @black;
+		font-weight: bold;
+	}
+}
