@@ -1,0 +1,37 @@
+body {
+	border-top: 3px solid @anthracite;
+	background-color: @lightestGray;
+}
+
+.content {
+	position: relative;
+	padding-bottom: 60px;
+	border-bottom: 3px solid @anthracite;
+	background-color: @white;
+
+	@media @large-or-more {
+		padding-bottom: 5em;
+	}
+}
+
+.main {
+	clear: both;
+	border-top: 10px solid @lightestBlue;
+
+	@media @medium-or-more {
+		border-top: 10px solid @lightBlue;
+	}
+
+	@media @large-or-more {
+		padding: 0 0 20px 0;
+	}
+}
+
+.search-wrapper {
+	height: 3.1em;
+	background-color: @azure;
+
+	@media @medium-or-more {
+		height: 3.6em;
+	}
+}

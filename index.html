@@ -1,36 +1,49 @@
 <!doctype html>
-	<!--[if lt IE 8]>      <html class="no-js lt-ie9 lt-ie8" lang="nl-NL"> <![endif]-->
-	<!--[if IE 8]>         <html class="no-js lt-ie9" lang="nl-NL"> <![endif]-->
-	<!--[if gt IE 8]><!--> <html class="no-js" lang="nl-NL"> <!--<![endif]-->
+	<!--[if lt IE 8]>      <html class="no-js lt-ie9 lt-ie8" lang="nl-NL" xml:lang="nl-NL"> <![endif]-->
+	<!--[if IE 8]>         <html class="no-js lt-ie9" lang="nl-NL" xml:lang="nl-NL"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js" lang="nl-NL" xml:lang="nl-NL"> <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="styles/main.css">
 		<title>Title</title>
-		<!--[if lt IE 9]><script src="scripts/respond.min.js"></script><![endif]-->
-		<meta name="robots" content="noydir, noodp">
-		<meta name="description" content="Omschrijving"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Omschrijving">
+		<link rel="stylesheet" href="styles/main.css">
+		<!--[if lt IE 9]>
+		<script src="scripts/respond.min.js"></script>
+		<![endif]-->
 	</head>
 	<body>
-		<div id="centerbox">
-			<div id="mainbox">
-				<header id="header">
-					<img src="images/logo.png" alt="Rijksoverheid" id="logotype"/>
+		<div class="l-container">
+			<div class="content">
+
+				<header class="site-header" role="banner">
+
+					<img src="images/logo.png" alt="Rijksoverheid" class="logo">
+
 					<div class="skiplinks">
 						<p>
-							<span class="assistive">Ga direct naar</span>
-							<a title="Navigeer naar de inhoud" href="#content">Inhoud</a>
-							<span class="assistive">of</span>
-							<a id="skip-to-menu" class="active" title="Navigeer naar het hoofdmenu" href="#navigation">Menu</a>
+							<span class="assistive">
+								Ga direct naar
+							</span>
+							<a title="Navigeer naar de inhoud" href="#content" class="assistive">
+								Inhoud
+							</a>
+							<span class="assistive">
+								of
+							</span>
+							<a id="skip-to-menu" class="btn btn-menu" class="active" title="Navigeer naar het hoofdmenu" href="#navigation">
+								Menu
+							</a>
 						</p>
 					</div>
-					<div id="search">
-						<form method="get" action="/zoeken" id="search-form">
-							<p>
-								<label for="search-keyword">Zoeken</label>
-								<input type="text" id="search-keyword" name="keyword" maxlength="250" size="15" title="Type hier uw zoektermen" value=""/>
-								<input type="submit" id="search-submit" name="search-submit" title="Start het zoeken" value="Zoek"/>
-							</p>
+
+					<div id="search" class="search-wrapper">
+						<form method="get" action="/zoeken" id="search-form" class="form form-search">
+							<div>
+								<label for="search-keyword" class="assistive">Zoeken</label>
+								<input type="search" id="search-keyword" name="keyword" maxlength="250" size="15" title="Type hier uw zoektermen" value=""/>
+								<input type="submit" class="btn btn-search" id="search-submit" name="search-submit" title="Start het zoeken" value="Zoek"/>
+							</div>
 						</form>
 					</div>
 				</header>
@@ -40,17 +53,23 @@
 						<p>Uw webbrowser ondersteunt deze standaarden niet. Stap daarom over op een recente browser.</p>
 					</div>
 				<![endif]-->
-				<main id="main">
-					<div class="header">
-						<p id="breadcrumb">
+				<main class="main clearfix" id="main" role="main">
+
+					<div class="section-header clearfix">
+
+						<p class="breadcrumbs">
 							<span class="assistive">U bevindt zich hier:</span>
 							<a href="#link">Home</a>
 							<a href="#link">niveau 1</a>
 							<a href="#link">niveau 2</a>
 						</p>
+
 						<span class="assistive">Onderwerp: </span>
+
 						<a class="topic-link" href="#link"><span>Onderwerp Titel</span></a>
+
 						<p class="assistive">Dit onderwerp bevat 5 rubrieken.</p>
+
 						<ul class="tabs">
 							<li><a href="#link">sub tab 1</a></li>
 							<li class="selected"><a href="#link">sub tab 2</a></li>
@@ -59,20 +78,25 @@
 							<li><a href="#link">sub tab 5</a></li>
 						</ul>
 					</div>
+
 					<h1 class="assistive">Header</h1>
+
 					<div class="leaderboard">
 						<p>leaderboard</p>
 					</div>
+
 					<div class="article" id="content">
 						<p>article</p>
 					</div>
+
 					<div id="aside">
 						<p>aside</p>
 					</div>
+
 				</main>
-				<nav id="navigation" class="nav-block">
+				<nav id="navigation" class="nav-block main-nav" role="nav">
 					<h2>Hoofdnavigatie</h2>
-					<ul>
+					<ul class="clearfix">
 						<li class="selected"><a href="#link">Home</a></li>
 						<li><a href="#link">Tab 1</a></li>
 						<li><a href="#link">Tab 2</a></li>
@@ -83,7 +107,8 @@
 					</ul>
 				</nav>
 			</div>
-			<footer id="footer" class="three-column">
+
+			<footer id="footer" class="site-footer three-column clearfix">
 				<div class="column">
 					<h2>Servicemenu</h2>
 					<ul>

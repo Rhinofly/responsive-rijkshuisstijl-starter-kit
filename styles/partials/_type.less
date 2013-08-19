@@ -1,31 +1,37 @@
 /* -----------------------------------------------
 	 MAIN TYPOGRAPHY
 	 -----------------------------------------------*/
-html {
-	font-size: 14px;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
+html,
+body {
+	font-size: @fontSizeBase;
+	line-height: @lineHeightBase;
+	.text-size-adjust(100%);
+
+	@media @medium-or-more {
+		font-size: @fontSizeSmall;
+	}
 }
 
-body {
-	font-size: 14px;
-	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+h1, h2, h3 {
+	font-family: @fontFamilyHeading;
+	font-weight: bold;
 }
 
 h1 {
+	font-size: 1.5em;
+	line-height: 1.2;
 	margin-bottom: 1em;
 	padding-bottom: 1px;
-	font: bold 1.5em/1.2 Arial, HelveticaNeue, Helvetica, Univers, sans-serif;
 }
 
 h2 {
 	margin: 2em 0 0.2em;
-	font: bold 1.25em/1.5 Arial, HelveticaNeue, Helvetica, Univers, sans-serif;
+	font-size: 1.25em;
+	line-height: 1.5;
 }
 
 p {
 	margin-bottom: 1.2em;
-	line-height: 1.8;
 }
 
 pre {
@@ -33,7 +39,7 @@ pre {
 }
 
 em {
-	font-style: normal;
+	font-style: normal; // Why not italic?
 }
 
 sub,

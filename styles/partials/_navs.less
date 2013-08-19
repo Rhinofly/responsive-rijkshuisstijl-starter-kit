@@ -1,0 +1,140 @@
+.main-nav {
+	clear: left;
+	margin: 40px 10px 20px 10px;
+
+	ul {
+		background-color: @lightestBlue;
+
+		@media @xlarge-or-more {
+			margin: 1.5em 0 0 20px;
+			background-color: transparent;
+		}
+	}
+
+	li {
+		margin: 0 0 2px -10px;
+
+		@media @medium-or-more {
+			display: block;
+			width: 50%;
+			clear: none;
+			float: left;
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		@media @xlarge-or-more {
+			width: auto;
+			float: left;
+			margin: 0;
+			border-bottom: 0;
+		}
+	}
+
+
+	a,
+	a:visited {
+		display: block;
+		padding: 0.4em 10px 0.4em 20px;
+		font-family: arial, helvetica, sans-serif;
+		font-size: 1.1em;
+		text-decoration: none;
+		color: @darkBlue;
+
+		@media @xlarge-or-more {
+			padding: 0.1em 10px;
+			background-color: transparent;
+			color: @white;
+			font-family: arial, helvetica, sans-serif;
+			font-size: 1.1em;
+			font-weight: bold;
+		}
+	}
+	a:hover,
+	a:active {
+		color: @blue;
+
+		@media @xlarge-or-more {
+			background-color: @lightBlue;
+			color: @black;
+		}
+	}
+	.selected a {
+		color: @black;
+		font-weight: bold;
+	}
+
+	@media @large-or-more {
+		margin-top: 40px;
+	}
+
+	@media @xlarge-or-more {
+		width: auto;
+		max-width: 66em;
+		height: 3.575em;
+		position: absolute;
+		top: 87px;
+		margin: 0;
+		background-color: transparent;
+
+		h2 {
+			position: absolute;
+			top: -100000px;
+		}
+
+		.selected a,
+		.selected a:visited {
+			background-color: @lightBlue;
+			color: @black;
+		}
+	}
+}
+
+.js .navigation {
+	@media @large-or-less {
+		width: 100%;
+		max-width: none;
+		margin: 0;
+
+		h2 {
+			position: absolute;
+			top: -100000px;
+		}
+
+		ul {
+			background-color: @azure;
+			padding: 0 10px;
+			li {margin: 0;}
+		}
+
+		&.hide {
+			height: 0;
+			overflow: hidden;
+		}
+
+		a,
+		a:visited {
+			display: block;
+			padding: 0.4em 10px 0.4em 0;
+			border-top: 1px solid @lightAzure;
+			font-family: arial, helvetica, sans-serif;
+			font-size: 1.1em;
+			text-decoration: none;
+			color: @lightBlue;
+		}
+
+		a:hover,
+		a:active,
+		.selected a {
+			color: @white;
+		}
+	}
+
+	@media @medium-to-large {
+		a { margin-left: 20px; }
+	}
+
+	@media @large-to-xlarge {
+		ul { padding: 0 20px; }
+	}
+}

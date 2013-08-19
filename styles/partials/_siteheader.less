@@ -1,0 +1,56 @@
+.site-header{
+	position: relative;
+	padding-top: 76px;
+	overflow: hidden;
+
+	@media @medium-or-more {
+		padding-top: 87px;
+	}
+}
+
+.logo {
+	position: absolute;
+	left: 50%;
+	top: -11px;
+	margin-left: -22px;
+
+	@media @medium-or-more {
+		top: 0;
+	}
+}
+
+.section-header {
+	background: @lightestBlue;
+	padding: 5px 10px 0;
+
+	@media @medium-or-more {
+		background: @lightBlue;
+		.vertical-gradient (@lightBlue; @lightestBlue; 0%; 100%)
+	}
+}
+
+.topic-link {
+	display: block;
+	float: left;
+	padding: 0.2em 0 0.6em;
+	font: normal 1.833em/1.2 @fontFamilyHeading;
+	text-decoration: none;
+	color: @darkBlue;
+
+	&:hover,
+	&:active {
+		text-decoration: none;
+
+		span {
+			color: @blue;
+			text-decoration: underline;
+		}
+	}
+
+	em {
+		display: block;
+		color: @anthracite;
+		font-size: 0.818em;
+		line-height: 1.8;
+	}
+}

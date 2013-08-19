@@ -1,7 +1,4 @@
-/* -----------------------------------------------
-		FOOTER NAVIGATION
-	 -----------------------------------------------*/
-#footer {
+.site-footer {
 	background-color: @lightGray;
 	padding-bottom: 20px;
 	position: relative;
@@ -9,14 +6,7 @@
 	margin-right: auto;
 	padding-left: 20px;
 	padding-right: 20px;
-	&:after {
-		content: " ";
-		height: 0;
-		line-height: 0;
-		visibility: hidden;
-		display: block;
-		clear: left;
-	}
+
 	&:before {
 		content: " ";
 		display: block;
@@ -46,6 +36,7 @@
 			padding: 0;
 		}
 	}
+
 	a,
 	a:visited {
 		display: block;
@@ -58,11 +49,44 @@
 	a:hover {
 		text-decoration: underline;
 	}
-	.column {
-		clear: both;
-		float: left;
-		margin-left: 0;
-		width: 100%;
-		display: block;
+
+	@media @small-or-more {
+		padding: 0 20px 20px;
+		h2,
+		ul {
+			margin-left: 0px;
+		}
+
+		li {
+			display: block;
+			float: left;
+			margin-left: 0;
+			margin-right: 0;
+			width: 100%;
+		}
+	}
+
+	@media @large-or-more {
+		padding: 0 20px 40px;
+
+		a {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		a,
+		a:visited {
+			font-size: 1.083em;
+		}
+
+		h2 {
+			padding-left: 0;
+			padding-right: 0;
+			margin-bottom: 0.33em;
+			font-size: 1.5em;
+		}
+
+		ul {
+			padding: 0;
+		}
 	}
 }

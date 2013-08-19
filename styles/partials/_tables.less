@@ -1,0 +1,37 @@
+@media @medium-or-more {
+	table {
+		width: auto;
+		margin: 0 0 20px -10px;
+
+		form & {
+			margin-left: 0;
+		}
+
+		form fieldset & {
+			margin-left: -20px;
+		}
+	}
+
+	td,
+	th {
+		padding: 0.6em 5px 0.6em 5px;
+		line-height: 1.5;
+		&:first-child {padding-left: 10px;}
+	}
+
+	th.col-wide {
+		width: 40%;
+	}
+
+	thead th + th,
+	tbody td + td,
+	tbody th + td {
+		padding-left: 10px;
+	}
+}
+
+@media @large-or-more {
+	caption {
+		padding-left: 20px;
+	}
+}
