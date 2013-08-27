@@ -4,38 +4,39 @@
 	margin-left: 0;
 	width: 100%;
 	display: block;
-
-
-	@media @small-or-more {
-		clear: none;
-		float: left;
-		margin-left: 2.2727%;
-		width: 31.8181%;
-		display: block;
-
-		&:first-child {
-			clear: both;
-			float: left;
-			margin-left: 0;
-		}
-	}
-
-	@media @large-or-more {
-		clear: none;
-		float: left;
-		margin-left: 1.6949%;
-		width: 32.2033%;
-		display: block;
-		&:first-child {
-			clear: both;
-			margin-left: 0;
-		}
-	}
 }
 
-.three-columns {
+.three-column {
 	@media @small-or-more {
 		margin-left: -20px;
 		margin-right: 0;
+	}
+
+	.column {
+		@media @medium-or-more {
+			clear: none;
+			float: left;
+			margin-left: 2.2727%;
+			width: 31.8181%;
+			display: block;
+
+			&:first-child {
+				clear: both;
+				float: left;
+				margin-left: 0;
+			}
+		}
+
+		@media @large-or-more {
+			clear: none;
+			float: left;
+			margin-left: 1.6949%;
+			width: 32.2033%;
+			display: block;
+			&:first-child {
+				clear: both;
+				margin-left: 0;
+			}
+		}
 	}
 }

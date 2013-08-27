@@ -1,13 +1,26 @@
+button,
+input[type="submit"] {
+	-webkit-appearance: none;
+	.border-radius(0);
+}
+
+button,
+input[type="submit"],
 .btn {
 	display: block;
 	width: auto;
-	padding: 4px 4px 4px 18px;
 	margin: 0;
 	border: 0;
-
-	color: @darkBlue;
 	font-weight: normal;
 	cursor: pointer;
+	float: left;
+	margin: 0 20px 0 0;
+	padding: .4em 10px .6em;
+	border: 0;
+	background-color: @azure;
+	color: @white;
+	font-size: 1.083em;
+	-webkit-appearance: button;
 }
 
 .btn:active {
@@ -15,8 +28,14 @@
 }
 
 
-.btn-search {
+input[type="submit"].btn-search {
+	width: auto;
+	float: left;
 	padding: 4px 4px 4px 24px;
+	margin: 0;
+	color: @darkBlue;
+	font-size: 0.9em;
+	line-height: 1.5;
 	background: @lightBlue url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAMAAABFNRROAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ bWFnZVJlYWR5ccllPAAAAAxQTFRFAWibmcPXOImx////cMSuLgAAAAR0Uk5T////AEAqqfQAAABB SURBVHjabI5JDgAwCAKx/P/PtaBdknIwGRcQZCAVXAIHpCEK9V3ZS4km+uRL9+br0gmedbqwPMrv ELH968spwABl+gExsfnwvAAAAABJRU5ErkJggg==") no-repeat 6px 50%;
 
 	@media @small-or-more {

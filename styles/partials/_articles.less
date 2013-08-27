@@ -11,4 +11,21 @@
 		float: left;
 		margin-top: 40px;
 	}
+
+	form {
+		margin-left: -10px;
+
+		@media @large-or-more {
+			margin-left: -20px;
+		}
+	}
+
+	@media @large-or-more {
+		form h2,
+		form fieldset,
+		form > p {
+			padding-left: 20px;
+			margin-left: 0;
+		}
+	}
 }

@@ -49,67 +49,7 @@ button {
   line-height: 1.8;
   background-color: #ffffff;
 }
-/*1*//*2*//*7*//*8*//*9*//*10*//*11*//*13*//*14*//*15*//*16*//*33*//*58*//*59*//*60*//* -----------------------------------
-	 REGULAR LAYOUT
-	 Tablet landscape
-	 Small laptops
-	 Small canvases on desktop
-	 Font size drop
-	 -----------------------------------*/
-@media (min-width: 50em) {
-  caption {
-    padding-left: 20px;
-  }
-  /*	.leaderboard {padding: 0 0 0 20px;}*/
-  #skip-to-menu {
-    left: 20px;
-  }
-  /* --------------------------
-  		 FOOTER NAVIGATION
-  		 --------------------------*/
-  #footer {
-    padding: 0 20px 40px;
-  }
-  #footer .column {
-    clear: none;
-    float: left;
-    margin-left: 1.6949%;
-    width: 32.2033%;
-    display: block;
-  }
-  #footer .column:first-child {
-    clear: both;
-    margin-left: 0;
-  }
-  #footer a {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  #footer h2 {
-    padding-left: 0;
-    padding-right: 0;
-    margin-bottom: 0.33em;
-    font-size: 1.5em;
-  }
-  #footer a,
-  #footer a:visited {
-    font-size: 1.083em;
-  }
-  #footer ul {
-    padding: 0;
-  }
-  /* ---------------------------
-  		 TABBED NAVIGATION
-  		 ---------------------------*/
-  .tabs li {
-    margin-right: 10px;
-  }
-  .tabs a,
-  .tabs strong {
-    font-size: 1.25em;
-  }
-}
-/*61*//*62*//*-a*//* -----------------------------------------------
+/* -----------------------------------------------
 	 MAIN TYPOGRAPHY
 	 -----------------------------------------------*/
 html,
@@ -183,23 +123,36 @@ sub {
   display: block;
 }
 @media only screen and (min-width: 22em) {
-  .column {
+  .three-column {
+    margin-left: -20px;
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 36em) {
+  .three-column .column {
     clear: none;
     float: left;
     margin-left: 2.2727%;
     width: 31.8181%;
     display: block;
   }
-  .column:first-child {
+  .three-column .column:first-child {
     clear: both;
     float: left;
     margin-left: 0;
   }
 }
-@media only screen and (min-width: 22em) {
-  .three-columns {
-    margin-left: -20px;
-    margin-right: 0;
+@media only screen and (min-width: 50em) {
+  .three-column .column {
+    clear: none;
+    float: left;
+    margin-left: 1.6949%;
+    width: 32.2033%;
+    display: block;
+  }
+  .three-column .column:first-child {
+    clear: both;
+    margin-left: 0;
   }
 }
 body {
@@ -228,7 +181,7 @@ body {
 }
 @media only screen and (min-width: 50em) {
   .main {
-    padding: 0 0 20px 0;
+    padding: 0 20px 0 0;
   }
 }
 .search-wrapper {
@@ -258,6 +211,22 @@ body {
     margin-top: 40px;
   }
 }
+.article form {
+  margin-left: -10px;
+}
+@media only screen and (min-width: 50em) {
+  .article form {
+    margin-left: -20px;
+  }
+}
+@media only screen and (min-width: 50em) {
+  .article form h2,
+  .article form fieldset,
+  .article form > p {
+    padding-left: 20px;
+    margin-left: 0;
+  }
+}
 .article ul {
   clear: left;
   margin-bottom: 0.8em;
@@ -265,7 +234,7 @@ body {
 .article li {
   margin: 0.4em 0;
   padding-left: 30px;
-  background: url("../images/sprite-bullet.png") no-repeat 10px 0.8em;
+  background: url('/assets/images/sprite-bullet.png') no-repeat 10px 0.8em;
 }
 .article ol {
   list-style-type: decimal;
@@ -283,6 +252,11 @@ body {
 @media only screen and (min-width: 36em) {
   .leaderboard {
     margin: 40px 0 0;
+  }
+}
+@media only screen and (min-width: 50em) {
+  .leaderboard {
+    padding: 0 0 0 20px;
   }
 }
 .site-header {
@@ -319,6 +293,13 @@ body {
     background-image: linear-gradient(to bottom, #cce0f1 0%, #e5f0f9 100%);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcce0f1', endColorstr='#ffe5f0f9', GradientType=0);
+  }
+}
+@media only screen and (min-width: 50em) {
+  .section-header {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: -20px;
   }
 }
 .topic-link {
@@ -368,25 +349,68 @@ body {
     margin-right: 20px;
   }
 }
+.form-search input[type="search"] {
+  display: block;
+  width: 10em;
+  float: left;
+  margin: 0;
+  border: 0;
+  padding: 4px 0;
+  background-color: transparent;
+  color: #111122;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+fieldset {
+  padding-left: 10px;
+  background-color: #e5f0f9;
+  overflow: hidden;
+}
+form .error {
+  padding-bottom: 0;
+}
+form .message.error {
+  padding-bottom: 5px;
+}
+button,
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+button,
+input[type="submit"],
 .btn {
   display: block;
   width: auto;
-  padding: 4px 4px 4px 18px;
   margin: 0;
-  border: 0;
-  color: #154273;
   font-weight: normal;
   cursor: pointer;
+  float: left;
+  margin: 0 20px 0 0;
+  padding: .4em 10px .6em;
+  border: 0;
+  background-color: #01689b;
+  color: #ffffff;
+  font-size: 1.083em;
+  -webkit-appearance: button;
 }
 .btn:active {
   background-color: #ffffff;
 }
-.btn-search {
+input[type="submit"].btn-search {
+  width: auto;
+  float: left;
   padding: 4px 4px 4px 24px;
+  margin: 0;
+  color: #154273;
+  font-size: 0.9em;
+  line-height: 1.5;
   background: #cce0f1 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAMAAABFNRROAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ bWFnZVJlYWR5ccllPAAAAAxQTFRFAWibmcPXOImx////cMSuLgAAAAR0Uk5T////AEAqqfQAAABB SURBVHjabI5JDgAwCAKx/P/PtaBdknIwGRcQZCAVXAIHpCEK9V3ZS4km+uRL9+br0gmedbqwPMrv ELH968spwABl+gExsfnwvAAAAABJRU5ErkJggg==") no-repeat 6px 50%;
 }
 @media only screen and (min-width: 22em) {
-  .btn-search {
+  input[type="submit"].btn-search {
     padding: 4px 10px 4px 24px;
   }
 }
@@ -426,16 +450,139 @@ body {
     text-transform: lowercase;
   }
 }
-input[type="search"] {
-  display: block;
-  width: 10em;
-  float: left;
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+select,
+textarea {
+  border: 1px solid #cce0f1;
+  border-bottom: 2px solid #01689b;
+}
+select {
+  padding: 0.33em 0;
+  -webkit-border-radius: 0;
+}
+input[type="text"],
+select {
+  width: 100%;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
+  padding: 0;
+  border: 2px solid #e5f0f9;
+}
+input[type="checkbox"] {
+  margin: 0.25em 0 0;
+  -webkit-border-radius: 0;
+}
+input[type="radio"] {
+  margin: 0.25em 0 0;
+  color: #01689B;
+  background-color: #e5f0f9;
+}
+.disabled + label {
+  cursor: default;
+  -moz-opacity: .4;
+  -webkit-opacity: .4;
+  opacity: .4;
+}
+.checklist,
+.optionlist {
+  padding: 1.2em 0 0.8em 10px;
+  position: relative;
+}
+.checklist > div,
+.optionlist > div {
+  padding: 0;
   margin: 0;
-  border: 0;
-  padding: 4px 0;
-  background-color: transparent;
-  color: #111122;
-  font-size: 0.9em;
+  overflow: visible;
+}
+.checklist .hint,
+.optionlist .hint {
+  padding-left: 30px;
+}
+.checklist label,
+.optionlist label {
+  color: #154273;
+  font-weight: bold;
+}
+.checklist div.field,
+.optionlist div.field {
+  padding: 0 60px 0 30px;
+  overflow: visible;
+}
+.checklist input,
+.optionlist input {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.checklist .subchecklist,
+.optionlist .subchecklist {
+  padding-left: 0;
+}
+.checklist .subchecklist div.field,
+.optionlist .subchecklist div.field {
+  padding-right: 0;
+}
+.checklist .subchecklist label,
+.optionlist .subchecklist label {
+  color: black;
+  font-weight: normal;
+}
+.checklist + .navigation div,
+.optionlist + .navigation div {
+  padding-left: 0;
+}
+label.radio {
+  padding-left: 30px;
+  position: relative;
+}
+.inline-label {
+  float: left;
+}
+.radio-subfields {
+  margin: 0 0 0.8em 0;
+}
+.radio-subfields fieldset,
+.radio-subfields .field {
+  margin: 0 0 0.8em 0;
+  padding: 0 10px 0.8em;
+}
+.article fieldset.radio-subfields {
+  padding-left: 30px;
+}
+span.radio-subfields {
+  padding: 0;
+  float: none;
+  display: inline;
+}
+span.radio-subfields label {
+  position: static;
+  padding-top: 0.8em;
+  margin-top: 0;
+}
+label.choice {
+  margin: 0 1em 0.8em 0;
+  width: auto;
+  float: left;
+  padding-top: 0.25em;
+  left: 0;
+  top: 0;
+  padding-left: 30px;
+  position: relative;
+}
+label.choice input {
+  left: 3px;
+  top: 0px;
+}
+textarea {
+  width: 100%;
+  height: 6em;
   line-height: 1.5;
 }
 .breadcrumbs {
@@ -462,6 +609,13 @@ input[type="search"] {
 .site-message {
   margin: 0 auto;
   max-width: 980px;
+}
+.message,
+.site-message {
+  padding: 30px 10px 5px;
+  background-image: url('/assets/images/sprite-icons-messages.png');
+  background-repeat: no-repeat;
+  background-position: 10px 0;
 }
 .main-nav {
   clear: left;
@@ -558,28 +712,28 @@ input[type="search"] {
   }
 }
 @media only screen and (max-width: 57.99em) {
-  .js .navigation {
+  .js .main-nav {
     width: 100%;
     max-width: none;
     margin: 0;
   }
-  .js .navigation h2 {
+  .js .main-nav h2 {
     position: absolute;
     top: -100000px;
   }
-  .js .navigation ul {
+  .js .main-nav ul {
     background-color: #01689b;
     padding: 0 10px;
   }
-  .js .navigation ul li {
+  .js .main-nav ul li {
     margin: 0;
   }
-  .js .navigation.hide {
+  .js .main-nav.hide {
     height: 0;
     overflow: hidden;
   }
-  .js .navigation a,
-  .js .navigation a:visited {
+  .js .main-nav a,
+  .js .main-nav a:visited {
     display: block;
     padding: 0.4em 10px 0.4em 0;
     border-top: 1px solid #0077aa;
@@ -588,19 +742,19 @@ input[type="search"] {
     text-decoration: none;
     color: #cce0f1;
   }
-  .js .navigation a:hover,
-  .js .navigation a:active,
-  .js .navigation .selected a {
+  .js .main-nav a:hover,
+  .js .main-nav a:active,
+  .js .main-nav .selected a {
     color: #ffffff;
   }
 }
 @media only screen and (min-width: 36em) and (max-width: 57.99em) {
-  .js .navigation a {
+  .js .main-nav a {
     margin-left: 20px;
   }
 }
 @media only screen and (min-width: 50em) and (max-width: 57.99em) {
-  .js .navigation ul {
+  .js .main-nav ul {
     padding: 0 20px;
   }
 }
@@ -619,6 +773,11 @@ input[type="search"] {
   .tabs li {
     float: left;
     border-top: 0;
+  }
+}
+@media only screen and (min-width: 50em) {
+  .tabs li {
+    margin-right: 10px;
   }
 }
 .tabs a {
@@ -660,7 +819,13 @@ input[type="search"] {
     font-weight: bold;
   }
 }
-@media (only screen and (min-width: 36em)) {
+@media only screen and (min-width: 50em) {
+  .tabs a,
+  .tabs strong {
+    font-size: 1.25em;
+  }
+}
+@media only screen and (min-width: 36em) {
   table {
     width: auto;
     margin: 0 0 20px -10px;
@@ -687,6 +852,11 @@ input[type="search"] {
   tbody td + td,
   tbody th + td {
     padding-left: 10px;
+  }
+}
+@media only screen and (min-width: 50em) {
+  caption {
+    padding-left: 20px;
   }
 }
 .site-footer {
@@ -721,7 +891,7 @@ input[type="search"] {
 .site-footer ul {
   padding: 0 10px;
 }
-.site-footer ul li {
+.site-footer li {
   display: block;
   float: left;
   margin: 0 20px 0 0;
@@ -739,7 +909,7 @@ input[type="search"] {
 .site-footer a:hover {
   text-decoration: underline;
 }
-@media only screen and (min-width: 22em) {
+@media only screen and (min-width: 36em) {
   .site-footer {
     padding: 0 20px 20px;
   }
@@ -754,4 +924,86 @@ input[type="search"] {
     margin-right: 0;
     width: 100%;
   }
+}
+@media only screen and (min-width: 50em) {
+  .site-footer {
+    padding: 0 20px 40px;
+  }
+  .site-footer a {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .site-footer a,
+  .site-footer a:visited {
+    font-size: 1.083em;
+  }
+  .site-footer h2 {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0.33em;
+    font-size: 1.5em;
+  }
+  .site-footer ul {
+    padding: 0;
+  }
+}
+.aside {
+  margin: 0 10px;
+}
+@media only screen and (min-width: 50em) {
+  .aside {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 0 0 20px;
+    display: block;
+    width: 25%;
+    max-width: 240px;
+    float: right;
+    clear: right;
+    margin: 40px 0 0 0;
+  }
+}
+@media only screen and (min-width: 36em) {
+  .aside .block {
+    display: block;
+    width: 50%;
+    clear: none;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .aside .block h2,
+  .aside .block ul {
+    margin-left: 20px;
+  }
+}
+@media only screen and (min-width: 50em) {
+  .aside .block {
+    width: auto;
+    float: none;
+  }
+  .aside .block h2,
+  .aside .block ul {
+    margin-left: 0;
+  }
+}
+@media only screen and (min-width: 36em) {
+  .aside .block:last-of-type:nth-of-type(2n+1) {
+    width: 100%;
+  }
+}
+.block {
+  margin: 0 0 20px;
+}
+@media only screen and (min-width: 36em) {
+  .block {
+    margin: 0 0 40px;
+  }
+}
+.block h2 {
+  margin: 0 0 .8em;
+  border-top: 3px solid #01689b;
+  padding: .4em 0 0;
 }
