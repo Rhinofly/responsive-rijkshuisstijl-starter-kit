@@ -1,0 +1,18 @@
+{
+  "name": "Rijkshuisstijl Boilerplate",
+  "version": "0.1.0",
+  "author": "Joost Kiens, Wilbert Corts",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/Rhinofly/responsive-rijkshuisstijl-starter-kit.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-less": "~0.8.3",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-jasmine": "~0.5.2",
+    "grunt-jslint": "~0.7.2",
+    "grunt-lesslint": "~0.15.0",
+    "grunt-modernizr": "~0.4.1"
+  }
+}
