@@ -1,0 +1,63 @@
+@import '../_global-imports';
+
+body,
+html {
+  .font-size(@font-size-m);
+  line-height: @line-height-base;
+  color: @color-content-text;
+}
+
+p {
+  margin-bottom: @text-margin-base;
+}
+
+a {
+  color: @color-content-link;
+
+  &:hover,
+  &:focus {
+    color: lighten(@color-content-link, 20);
+  }
+
+  &:active {
+    color: darken(@color-content-link, 20);
+  }
+}
+
+small {
+  .font-size(@font-size-s);
+}
+
+h1 {
+  .heading(@font-size-xxxl);
+}
+
+h2 {
+  .heading(@font-size-xxl);
+}
+
+h3 {
+  .heading(@font-size-xl);
+}
+
+h4 {
+  .heading(@font-size-l);
+}
+
+h5 {
+  .heading(@font-size-m);
+}
+
+h6 {
+  .heading(@font-size-s);
+}
+
+::-moz-selection {
+    background: @color-theme-medium;
+    text-shadow: none;
+}
+
+::selection {
+    background: @color-theme-medium;
+    text-shadow: none;
+}

@@ -1,0 +1,14 @@
+.font-size (@sizeValue) {
+  @remValue: (@sizeValue / 10);
+  @pxValue: @sizeValue;
+  font-size: ~"@{pxValue}px";
+  font-size: ~"@{remValue}rem";
+}
+
+.heading (@sizeValue) {
+  .font-size(@sizeValue);
+  font-weight: @font-weight-bold;
+  line-height: @line-height-heading;
+  margin: @text-margin-heading 0;
+  font-family: @font-family-heading;
+}

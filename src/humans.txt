@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Joost Kiens -- Frontend Developer
+
+# THANKS
+
+    Wilbert Corts
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Grunt, h5bp
