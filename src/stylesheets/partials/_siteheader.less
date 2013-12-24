@@ -1,0 +1,33 @@
+@import '../_global-imports';
+
+.@{prefixname} {
+  &siteheader-logo-wrapper {
+    position: relative;
+    height: auto;
+    min-height: @siteheader-logo-wrapper-min-height;
+  }
+
+  &siteheader-logo-link {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -(@siteheader-logo-width / 2);
+  }
+
+  &siteheader-organisation-name {
+    position: relative;
+    top: @siteheader-logo-height / 2;
+    left: 50%;
+    margin-left: (@siteheader-logo-width / 2) + @horizontal-spacing-base;
+
+    font-size: @font-size-s;
+    font-family: @font-family-heading;
+    line-height: @line-height-font-size;
+
+    a {
+      color: @color-black;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import '../_global-imports';
+
+.@{prefixname} {
+  &metadata {
+
+    height: 3 * @vertical-spacing-base;
+    line-height: 3 * @vertical-spacing-base;
+
+    .font-size(@font-size-s);
+
+    a {
+      color: @color-body-link;
+
+      &:hover,
+      &:focus {
+        color: lighten(@color-body-link, 20);
+      }
+
+      &:active {
+        color: darken(@color-body-link, 20);
+      }
+    }
+  }
+}

@@ -447,17 +447,28 @@ table {
  *    `:before` to contain the top-margins of child elements.
  */
 .clearfix:before,
-.clearfix:after {
+.clearfix:after,
+.rhs-container:before,
+.rhs-container:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */
 }
-.clearfix:after {
+.clearfix:after,
+.rhs-container:after {
   clear: both;
 }
-body,
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
 html {
+  font-size: 62.5%;
+}
+body {
   font-size: 13px;
   font-size: 1.3rem;
   line-height: 1.5;
@@ -692,4 +703,64 @@ h6 {
   width: 96%;
   max-width: 1024px;
   margin: 0 auto;
+}
+.rhs-list-inline {
+  list-style: none;
+  margin: 0;
+}
+.rhs-list-inline li {
+  float: left;
+  margin: 0;
+  padding: 0 0 0 10px;
+}
+.rhs-list-inline li:first-child {
+  padding-left: 0;
+}
+body {
+  background-color: #f3f3f3;
+}
+.rhs-metadata {
+  height: 3em;
+  line-height: 3em;
+  font-size: 11px;
+  font-size: 1.1rem;
+}
+.rhs-metadata a {
+  color: #535353;
+}
+.rhs-metadata a:hover,
+.rhs-metadata a:focus {
+  color: #868686;
+}
+.rhs-metadata a:active {
+  color: #202020;
+}
+.rhs-page {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+.rhs-siteheader-logo-wrapper {
+  position: relative;
+  height: auto;
+  min-height: 88px;
+}
+.rhs-siteheader-logo-link {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -22px;
+}
+.rhs-siteheader-organisation-name {
+  position: relative;
+  top: 38.5px;
+  left: 50%;
+  margin-left: 32px;
+  font-size: 11;
+  font-family: 'roserif', verdana, sans-serif;
+  line-height: 1;
+}
+.rhs-siteheader-organisation-name a {
+  color: #000000;
+  text-decoration: none;
 }
